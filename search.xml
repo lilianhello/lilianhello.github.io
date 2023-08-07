@@ -60,8 +60,7 @@
 <p>搜索下面的关键词感受一下：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">MySQLdb.connect passwd</span><br></pre></td></tr></table></figure>
 
-<p><img src="/GitHub/Untitled.png"></p>
-</li>
+<img src="/2023/08/07/Github/Untitled.png" class></li>
 </ul>
 ]]></content>
       <categories>
@@ -175,6 +174,187 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用hexo创建个人博客，并将其部署在Github上</title>
+    <url>/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/</url>
+    <content><![CDATA[<ul>
+<li><p>安装node.js</p>
+<p>  下载链接<a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p>
+<p>  命令行执行如下命令，查看是否安装成功：</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化blog</p>
+<ol>
+<li><p>安装hexo</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+ <span id="more"></span>
+</li>
+<li><p>初始化博客目录</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo init lilianhello.github.io</span><br></pre></td></tr></table></figure>
+
+<p> 注意：考虑到要将博客部署到Github上，所以“lilianhello”与Github的账号名称一致</p>
+</li>
+<li><p>进入博客根目录</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">cd lilianhello.github.io</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖库文件</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除缓存</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态页面</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动本地服务器</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>新建博文</p>
+<p>  在博客根目录下执行命令：</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo new 文章名</span><br></pre></td></tr></table></figure>
+<p>  此时.&#x2F;source&#x2F;_posts&#x2F;目录下会生成一个md文件</p>
+</li>
+<li><p>给文章添加标签和分类</p>
+<p>  在博客根目录下执行命令：</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>  此时.&#x2F;source&#x2F;目录下会生成tags&#x2F;index.md和categories&#x2F;index.md文件，将其打开，均修改为：</p>
+  <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled.png" class>
+<p>  先确认一下博客根目录下的配置文件_config.yml是否打开了tag_dir: tags和category_dir: categories</p>
+  <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%201.png" class>
+<p>  然后就可以在我们的文章头部加上标签和分类了：</p>
+  <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%202.png" class>
+</li>
+<li><p>美化博客</p>
+<ol>
+<li><p>安装NexT主题</p>
+<p> 在博客根目录下执行命令：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p> 于是在.&#x2F;themes&#x2F;next&#x2F;目录下安装了NexT主题</p>
+</li>
+<li><p>配置主题</p>
+<p> 打开博客根目录下的_config.yml文件，修改主题名为next：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%203.png" class>
+</li>
+<li><p>设置主题风格</p>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，设置主题风格为Gemini：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%204.png" class>
+</li>
+<li><p>修改个人信息</p>
+<p> 打开博客根目录下的_config.yml文件，修改个人信息：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%205.png" class>
+</li>
+<li><p>设置菜单</p>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，设置菜单：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%206.png" class>
+</li>
+<li><p>添加搜索功能</p>
+<p> 在博客根目录下执行命令：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb </span><br></pre></td></tr></table></figure>
+<p> 打开博客根目录下的_config.yml文件，添加如下内容：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># hexo-generator-searchdb </span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，定位到local_search，做如下修改：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%207.png" class>
+</li>
+<li><p>设置头像</p>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，设置头像为：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%208.png" class>
+</li>
+<li><p>设置网页图标</p>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，设置网页图标为：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%209.png" class>
+</li>
+<li><p>添加Github图标</p>
+<p> 打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，设置Github图标：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2010.png" class>
+</li>
+<li><p>隐藏底部由…强力驱动</p>
+<p>打开.&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;目录下的footer.swig文件，将第51行注释掉：</p>
+<img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2011.png" class>
+</li>
+<li><p>添加文章字数统计</p>
+<p>在博客根目录下执行命令：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录下的_config.yml文件，添加如下内容：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># hexo-symbols-count-time</span></span><br><span class="line">symbols<span class="emphasis">_count_</span>time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total<span class="emphasis">_symbols: true</span></span><br><span class="line"><span class="emphasis">  total_</span>time: true</span><br><span class="line">  exclude<span class="emphasis">_codeblock: false</span></span><br><span class="line"><span class="emphasis">  awl: 4</span></span><br><span class="line"><span class="emphasis">  wpm: 275</span></span><br><span class="line"><span class="emphasis">  suffix: &quot;mins.&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>统计网站浏览人数</p>
+<p>打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，定位到busuanzi_count，做如下修改：</p>
+<img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2012.png" class>
+</li>
+<li><p>添加摘要和阅读全文</p>
+<p>在文章中想要截断的位置前添加</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置可切换的深色模式</p>
+<p>在博客根目录下执行命令：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode --save</span><br></pre></td></tr></table></figure>
+
+<p>打开.&#x2F;themes&#x2F;next&#x2F;_config.yml，确保NexT主题的原生深色模式关闭：</p>
+<img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2013.png" class>
+
+<p>打开.&#x2F;themes&#x2F;next&#x2F;_config.yml，添加如下内容：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Darkmode JS</span></span><br><span class="line"><span class="section"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line">darkmode<span class="emphasis">_js:</span></span><br><span class="line"><span class="emphasis">  enable: true</span></span><br><span class="line"><span class="emphasis">  bottom: &#x27;64px&#x27; # default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="emphasis">  right: &#x27;unset&#x27; # default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="emphasis">  left: &#x27;32px&#x27; # default: &#x27;unset&#x27;</span></span><br><span class="line"><span class="emphasis">  time: &#x27;0.5s&#x27; # default: &#x27;0.3s&#x27;</span></span><br><span class="line"><span class="emphasis">  mixColor: &#x27;transparent&#x27; # default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="emphasis">  backgroundColor: &#x27;transparent&#x27; # default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="emphasis">  buttonColorDark: &#x27;#100f2c&#x27; # default: &#x27;#100f2c&#x27;</span></span><br><span class="line"><span class="emphasis">  buttonColorLight: &#x27;#fff&#x27; # default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="emphasis">  isActivated: true # default false</span></span><br><span class="line"><span class="emphasis">  saveInCookies: false # default: true</span></span><br><span class="line"><span class="emphasis">  label: &#x27;🌓&#x27; # default: &#x27;&#x27;</span></span><br><span class="line"><span class="emphasis">  autoMatchOsTheme: false # default: true</span></span><br><span class="line"><span class="emphasis">  libUrl: # Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置代码块为深色背景，且可以复制</p>
+<p>打开.&#x2F;themes&#x2F;next&#x2F;_config.yml，定位到codeblock，做如下修改：</p>
+<img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2014.png" class></li>
+</ol>
+</li>
+<li><p>博客插入图片</p>
+<p>  参考<a href="https://blog.csdn.net/xjm850552586/article/details/84101345">https://blog.csdn.net/xjm850552586/article/details/84101345</a></p>
+</li>
+<li><p>将博客部署在Github上</p>
+<ol>
+<li><p>在github上创建一个名为lilianhello.github.io的Public仓库</p>
+<p> 注意：“lilianhello”需要与Github账户名一致</p>
+</li>
+<li><p>安装hexo-deployer-git</p>
+<p> 在博客目录下执行命令：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置Git</p>
+<p> 打开博客根目录下的_config.yml文件，定位到deploy，做如下修改：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2015.png" class>
+</li>
+<li><p>推送网站到Github</p>
+<p> 在博客根目录下执行命令：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p> 报错：</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2016.png" class>
+<p> 按提示配置个人信息后再执行上述命令。</p>
+</li>
+<li><p>直接在浏览器输入lilianhello.github.io就可以访问自己的博客啦！</p>
+</li>
+</ol>
+</li>
+<li><p>给文章接入评论系统，以gitalk为例</p>
+<ol>
+<li><p>在github上创建一个用于存储评论的Public仓库</p>
+</li>
+<li><p>创建Github Application并获取clienID和clientSecret</p>
+<p> 参考<a href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a></p>
+</li>
+<li><p>打开.&#x2F;themes&#x2F;next&#x2F;目录下的_config.yml文件，配置gitalk</p>
+ <img src="/2023/08/07/%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E9%83%A8%E7%BD%B2%E5%9C%A8Github%E4%B8%8A/Untitled%2017.png" class>
+</li>
+<li><p>初始化评论</p>
+<p> 在博客目录下执行命令：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo s</span><br></pre></td></tr></table></figure>
+<p> 这时打开我们的文章是没有评论区的，需要先用admin_user的账号登录初始化之后才能看到评论区。</p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
