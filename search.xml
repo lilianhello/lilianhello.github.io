@@ -1,39 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2023/08/07/test/</url>
-    <content><![CDATA[]]></content>
+    <title>Github</title>
+    <url>/2023/08/07/Github/</url>
+    <content><![CDATA[<ul>
+<li><p>克隆项目到本地</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone 项目的远程地址</span><br></pre></td></tr></table></figure>
+
+<p>报错参考<a href="https://blog.csdn.net/helloasimo/article/details/123778112">https://blog.csdn.net/helloasimo/article/details/123778112</a></p>
+</li>
+<li><p>将本地commit推送到远程分支上去</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git push 远程名称 分支名称</span><br></pre></td></tr></table></figure>
+
+
+
+<span id="more"></span>
+
+<p>查看远程名称: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>查看分支名称: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Star, Fork, Watch, Gist, pull, Follow</p>
+<p>Star: 收藏</p>
+<p>Fork: 复制</p>
+<p>Watch: 监听</p>
+<p>Gist: 代码片段</p>
+<p>pull:  </p>
+<p>从远程的main分支上获取最新的代码：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+
+<p>Follow: 关注</p>
+</li>
+<li><p>Issues和Pull requests</p>
+<p>Issues:  反馈</p>
+<p>Pull requests: 请求合并</p>
+</li>
+<li><p>Github搜索技巧</p>
+<p>搜索README.md文件中含有关键词“中文书籍”的项目：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">中文书籍 in:readme</span><br></pre></td></tr></table></figure>
+
+<p>搜索google的python开源项目：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">python org:google</span><br></pre></td></tr></table></figure>
+
+<p>搜索某个用户：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">org:wistbean</span><br></pre></td></tr></table></figure>
+
+<p>搜索高赞的python开源项目：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">stars:&gt;=5000 language:python</span><br></pre></td></tr></table></figure>
+
+<p>搜索别人整理好的资源：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Awesome python 库</span><br></pre></td></tr></table></figure>
+
+<p>也可以通过下面这个地址来定义搜索条件并搜索</p>
+<p><a href="https://github.com/search/advanced">https://github.com/search/advanced</a></p>
+</li>
+<li><p>注意隐私</p>
+<p>搜索下面的关键词感受一下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">MySQLdb.connect passwd</span><br></pre></td></tr></table></figure>
+
+<p><img src="/GitHub/Untitled.png"></p>
+</li>
+</ul>
+]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>Github</category>
       </categories>
       <tags>
-        <tag>逻辑回归 - 机器学习</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/08/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+    <title>Git常用命令</title>
+    <url>/2023/08/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<ul>
+<li><p>初始化Git</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看git命令的说明</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git help</span><br></pre></td></tr></table></figure></li>
+</ul>
 <span id="more"></span>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Windows系统下命令行创建文件夹和文件</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">md 文件夹名</span><br><span class="line"></span><br><span class="line">type nul &gt; 文件名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git add 文件名</span><br><span class="line"></span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>commit</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git commit -m 说明信息</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看git状态</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看日志</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git log -5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>commit时说明信息写错了需要修改</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git commit —amend</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Windows系统下的编辑操作: 按c进入编辑模式，按esc退出编辑模式，按两次大写Z保存退出                       </p>
+</li>
+<li><p>已经commit了文件1，想要把文件2和文件1一起commit</p>
+<p>先add文件2，再执行命令</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git commit —amend</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add了一个文件后想要撤销add</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git reset HEAD 文件名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>commit了一个文件后想要撤销commit，保持add</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git reset —soft HEAD~</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>commit了一个文件后想要撤销commit和add （直接回退到上一个版本）</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git reset —hard HEAD~</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定特定的版本回退</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git reset HEAD commit<span class="emphasis">_id</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>commit_id可在git log中查看</p>
+</li>
+<li><p>查看项目的分支情况</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建新分支</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+
+<p>此时这个新分支指向最后一个commit对象</p>
+</li>
+<li><p>切换分支</p>
+<p>切换到已有分支: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
+
+<p>创建新分支并切换: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前分支下的文件内容</p>
+<p>Windows系统下查看当前文件夹下文件目录: dir</p>
+</li>
+<li><p>合并某分支和master分支</p>
+<p>首先切换到master分支: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+
+<p>合并某分支和master分支: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git merge 分支名</span><br></pre></td></tr></table></figure>
+
+<p>注 master分支通常情况下不直接拿来开发，之所以它是主分支，就是用来合并其他分支的。也  就是说，当你要开发具体功能的时候，不要直接在master下开发，你应该新建一个分支出来，开发完成了之后，再合并到master分支上去。</p>
+</li>
+<li><p>删除分支</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch -d 分支名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>想要切换分支，但当前分支上有文件没提交不能切换，需要先暂存</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看暂存记录</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取出暂存</p>
+<p>恢复最近的一个暂存记录：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git stash apply</span><br></pre></td></tr></table></figure>
+
+<p>恢复指定的暂存记录：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git stash apply stash编号</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并分支时遇到冲突</p>
+<p>打开有冲突的文件解决冲突后再提交</p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>Git</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
 </search>
